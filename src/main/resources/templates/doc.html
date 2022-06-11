@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <title>Page Title</title>
+   <meta name='viewport' content='width=device-width, initial-scale=1'>
+   <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+   <link rel='stylesheet' type='text/css' media='screen' href="/webjars/bootstrap/css/bootstrap.min.css">
+       <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+
+			<h1 style="text-align: center;color:green"> File Uploading page CMS </h1>
+     
+
+      <form th:action="@{/document/save}" th:object="${document}" method="post" 
+      enctype="multipart/form-data"
+      style="max-width: 400px; margin: 0 auto;">
+
+      <input type="file" name="document" id="document" />
+      <input type="text" name="description" id="description" />
+	  <input type="submit"/>
+   	
+   </form>
+     			<br>
+     			<br>
+   
+               <div class="progress mb-4">
+               <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+             </div>
+  
+  			<h1 style="text-align: center;color:green"> News Uploading page CMS </h1>
+  			
+  			  <form th:action="@{/news/save}" th:object="${news}" method="post" 
+      enctype="multipart/form-data"
+      style="max-width: 400px; margin: 0 auto;">
+
+      <input type="file" name="news" id="news" />
+      <textarea id="description" name="description" rows="4" cols="50"> </textarea>
+      <input type="text" name="title" id="title" />
+	  <input type="submit"/>
+   	
+   </form>
+       
+       
+                <br>
+     			<br>
+   
+               <div class="progress mb-4">
+               <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+             </div>
+  
+  			<h1 style="text-align: center;color:green"> Videos Uploading page CMS </h1>
+  			
+  			  <form th:action="@{/video/save}" th:object="${video}" method="post" 
+      enctype="multipart/form-data"
+      style="max-width: 400px; margin: 0 auto;">
+
+      <input type="file" name="video" id="video" accept="video/mp4,video/x-m4v,video/*" />
+      <textarea id="description" name="description" rows="4" cols="50"> </textarea>
+      <input type="text" name="title" id="title" />
+	  <input type="submit"/>
+      </form>
+  			
+          
+</body>
+</html>

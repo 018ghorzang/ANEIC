@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- index.html  30 Nov 2019 03:15:44 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AEIC</title>
+
+      <!-- This is the second page links-->
+     <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+    <!-- fontawesome css link -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <!-- flaticon css -->
+    <link rel="stylesheet" href="assets/font/flaticon.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- nice-select css -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- swipper css link -->
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- main style css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- responsive css link -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+<body>
+
+
+    <!-- preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-thumb">
+            <img src="assets/images/propeller.png" alt="image">
+        </div>
+    </div>
+
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+      <div class="container d-flex align-items-center justify-content-between">
+  
+        <div class="logo">
+          <h1><a href="index.html">NEIC</a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+  
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto " th:href="@{/}">Home</a></li>
+            <li><a class="nav-link scrollto" th:href="@{/about}">About</a></li>
+            <li class="dropdown active"><a th:href="@{/}">Energy Resource <i class="bi-chevron-down"></i></a>
+              <ul>
+                <li class="dropdown">Non-Renewable <i class="bi bi-chevron-right"></i>
+                  <ul>
+                    <li><a th:href="@{/coal}">Coal</a></li>
+                    <li><a th:href="@{/gas}">Gas</a></li>
+                    <li><a th:href="@{/petroluem}">Petroluem</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="#">Renewable<i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a th:href="@{/wind}">Wind</a></li>
+                    <li><a th:href="@{/solar}">Solar</a></li>
+                    <li><a th:href="@{/biomass}">Biomass</a></li>
+                  </ul>
+                </li>
+  
+                <li class="dropdown"><a href="#">Automic <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a th:href="@{/automic}">Autom</a></li>
+                    <li><a href="#">--</a></li>
+                    <li><a href="#">--</a></li>
+                  </ul>
+                </li>
+  
+              </ul>
+            </li>
+  
+            <li class="dropdown active"><a href="#">Statistics <i class="bi-chevron-down"></i></a>
+              <ul>
+                <li><a th:href="@{/document}">Documents</a></li>
+                <li><a th:href="@{/importelectricity}">Import Electricity</a></li>
+                <li><a th:href="@{/electricitygeneration}">Electricity generation</a></li>
+                <li><a th:href="@{/energyconsumption}">Energy Consumption</a></li>
+              </ul>
+            </li>
+  
+            <li class="dropdown active"><a href="#">Media <i class="bi-chevron-down"></i></a>
+              <ul>
+                <li><a th:href="@{/videos}">Video</a></li>
+                <li><a th:href="@{/photo}">Photo</a></li>
+                <li class="dropdown"><a href="#">Social Media <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a th:href="@{/facebook}">facebook</a></li>
+                    <li><a th:href="@{/twitter}">Twitter</a></li>
+                    <li><a th:href="@{/instagram}">Instagram</a></li>
+                    <li><a th:href="@{/youtube}">Youtube</a></li>
+                  </ul>
+                </li>
+                
+              </ul>
+            </li>
+  
+            <li><a class="nav-link scrollto" th:href="@{/contact}">Contact</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+  
+      </div>
+    </header><!-- End Header --><!-- End Header -->
+
+
+    <!-- banner-section start -->
+    <section class="inner-banner-section pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="inner-banner-content">
+                        <h2 class="title">Energy Consumption</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner-section end -->
+
+
+    <a href="#" class="scrollToTop"><img src="assets/images/aeroplane.pg" alt="image"></a>
+
+     <!-- breadcrumb-section start -->
+     <div class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- breadcrumb-section end -->
+
+
+   <!-- Gallery -->
+
+        <!-- Page Content -->
+      <!-- 21:9 aspect ratio -->
+
+                   ؋
+   <!-- Gallery -->
+     <!-- portfolio-section end -->
+   
+ 
+     <!-- footer-section start -->
+     <footer class="footer">
+         <div class="footer-left col-md-4 col-sm-6">
+           <p class="about">
+             <span> About the company</span> Ut congue augue non tellus bibendum, in varius tellus condimentum. In scelerisque nibh tortor, sed rhoncus odio condimentum in. Sed sed est ut sapien ultrices eleifend. Integer tellus est, vehicula eu lectus tincidunt,
+             ultricies feugiat leo. Suspendisse tellus elit, pharetra in hendrerit ut, aliquam quis augue. Nam ut nibh mollis, tristique ante sed, viverra massa.
+           </p>
+           <div class="icons">
+             <a href="#"><i class="fab fa-facebook"></i></a>
+             <a href="#"><i class="fab fa-twitter"></i></a>
+             <a href="#"><i class="fab fa-linkedin"></i></a>
+             <a href="#"><i class="fab fa-google-plus"></i></a>
+             <a href="#"><i class="fab fa-instagram"></i></a>
+           </div>
+         </div>
+         <div class="footer-center col-md-4 col-sm-6">
+           <div>
+             <i class="fa fa-map-marker"></i>
+             <p><span>  Darlaman Street </span> Kabul, Afghanistan</p>
+           </div>
+           <div>
+             <i class="fa fa-phone"></i>
+             <p> 02007484848</p>
+           </div>
+           <div>
+             <i class="fa fa-envelope"></i>
+             <p><a href="#"> aneic29@gmail.com</a></p>
+           </div>
+         </div>
+         <div class="footer-right col-md-4 col-sm-6">
+           <h2> ANEIC<span> logo</span></h2>
+           <p class="name"> Afghanistan Natioanl Electricity information Center &copy; 2022</p>
+         </div>
+       </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- jquery -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<!-- migarate-jquery -->
+<script src="assets/js/jquery-migrate-3.0.0.js"></script>
+<!-- bootstrap js -->
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- magnific-popup js -->
+<script src="assets/js/jquery.magnific-popup.js"></script>
+<!-- isotope -->
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<!-- nice-select js-->
+<script src="assets/js/jquery.nice-select.js"></script>
+<!-- swipper js -->
+<script src="assets/js/swiper.min.js"></script>
+<!-- waypoints js link -->
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<!-- counterup js -->
+<script src="assets/js/jquery.counterup.min.js"></script>
+<!-- paroller js -->
+<script src="assets/js/jquery.paroller.min.js"></script>
+<!-- main -->
+<script src="assets/js/main.js"></script>
+
+
+</body>
+
+<!-- gallery.html  30 Nov 2019 03:29:26 GMT -->
+</html>

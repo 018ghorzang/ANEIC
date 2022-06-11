@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+ 	   xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <title>Page Title</title>
+   <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+   <meta name='viewport' content='width=device-width, initial-scale=1'>
+   <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- fontawesome css link -->
+</head>
+<body>
+
+			<h1 style="text-align: center;color:green"> Documents Controll Management System  </h1>
+		Welcome <span sec:authentication="name">Username</span> - <span sec:authentication="principal.authorities">Roles</span>
+	  <a th:href="@{/logout}"> logout</a>
+	<a th:href="@{/doc}" sec:authorize="hasAnyAuthority('ADMIN')"> Uploading  files </a>
+		
+        	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Size</th>
+      <th scope="col">Date</th>
+      <th scope="col">Description</th>
+      <th scop="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="doc:${documents}">
+      <td th:text="${doc.id}"> </td>
+      <td th:text="${doc.name}" style="font-weight: bold; color:green"> </td>
+      <td>(<span th:text="${doc.size/1024}"/>)KB</td>
+      <td th:text="${doc.uploadTime}"> </td>
+      <td th:text="${doc.description}"> </td>
+      <td> 
+     	<a th:href="@{/document/findById/(id=${doc.id})}" class="btn btn-primary" id="editButton"   sec:authorize="hasAnyAuthority('ADMIN','EDITOR')">Edit<i class="icon_pencil-edit"></i></a>
+     	<a th:href="@{/delete/document/(id=${doc.id})}" class="btn btn-danger"    id="deleteButton" sec:authorize="hasAnyAuthority('ADMIN')">Delete<i class="icon_close_alt2"></i></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+                <br>
+     			<br>
+   
+               <div class="progress mb-4">
+               <div class="progress-bar" role="progressbar" style="width: 100%"> </div>
+             </div>
+             
+             <h1 style="text-align: center;color:green"> News Controll Management System  </h1>
+             
+                     	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scop="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="news:${getNews}">
+      <td th:text="${news.id}"> </td>
+      <td th:text="${news.title}" style="font-weight: bold; color:green"> </td>
+      <td th:text="${news.description}"> </td>
+      <td> 
+     	<a th:href="@{/delete/news/(id=${news.id})}" class="btn btn-danger"    id="deleteButton"  sec:authorize="hasAnyAuthority('ADMIN')">Delete<i class="icon_close_alt2"></i></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+	             <br>
+     			<br>
+   
+               <div class="progress mb-4">
+               <div class="progress-bar" role="progressbar" style="width: 100%"> </div>
+             </div>
+             
+             <h1 style="text-align: center;color:green"> Videos Controll Management System  </h1>
+             
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">thumbnail</th>
+      <th scop="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="video:${videos}">
+      <td th:text="${video.id}"> </td>
+      <td th:text="${video.title}" style="font-weight: bold; color:green"> </td>
+      <td> <video th:src="${video.getUrlPath}" style="width: 80px; height: 80px;"> </video> </td>
+      <td> 
+     	<a th:href="@{/delete/video/(id=${video.id})}" class="btn btn-danger"    id="deleteButton"  sec:authorize="hasAnyAuthority('ADMIN')">Delete<i class="icon_close_alt2"></i></a>
+         </td>
+         </tr>
+        </tbody>
+       </table>
+       
+              <br>
+     			<br>
+   
+               <div class="progress mb-4">
+               <div class="progress-bar" role="progressbar" style="width: 100%"> </div>
+             </div>
+             
+             <h1 style="text-align: center;color:green"> User Messages Controll Management System  </h1>
+             
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Subject</th>
+      <th scope="col">Message</th>
+      <th scop="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="message:${messages}">
+      <td th:text="${message.user.name}"> </td>
+      <td th:text="${message.subject}" style="font-weight: bold; color:green"> </td>
+      <td  th:text="${message.mess}"> </td>
+      <td> 
+     	<a th:href="@{/delete/message/(id=${message.id})}" class="btn btn-danger"    id="deleteButton"  sec:authorize="hasAnyAuthority('ADMIN')">Delete<i class="icon_close_alt2"></i></a>
+         </td>
+         </tr>
+        </tbody>
+       </table>
+
+		 <!--   Edit State Start -->
+  
+ <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit File</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      
+        </button>
+      </div>
+      <div class="modal-body">
+        <form th:action="@{/update/document}" method="GET">
+        
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">ID:</label>
+            <input type="text" class="form-control" id="id" name="id" readonly="readonly">
+          </div>
+        
+
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Name:</label>
+            <input type="text" class="form-control" id="name" name="name">
+          </div>
+          
+                   
+           <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Description:</label>
+            <input type="text" class="form-control" id="description" name="description">
+           </div>
+          
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Size:</label>
+            <input type="text" class="form-control" id="size" name="size" readonly="readonly">
+           </div>
+          
+          
+          <div class="form-group">
+          <button type="submit" class="btn btn-primary">Submit</button>
+         </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Edit State End -->
+
+
+       <!-- Start Delete Country Record -->
+
+<div class="modal" id="deleteModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirm Delete</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure to delete this records?</p>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary" id="confirmDeleteButton" href="">Delete</a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End Of Delete Country Records -->
+<!-- jquery -->
+
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/document.js"></script>
+          
+</body>
+</html>
