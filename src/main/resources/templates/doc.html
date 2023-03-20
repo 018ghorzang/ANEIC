@@ -3,7 +3,7 @@
 <head>
    <meta charset='utf-8'>
    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-   <title>Page Title</title>
+   <title>CMS</title>
    <meta name='viewport' content='width=device-width, initial-scale=1'>
    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
    <link rel='stylesheet' type='text/css' media='screen' href="/webjars/bootstrap/css/bootstrap.min.css">
@@ -11,7 +11,7 @@
 </head>
 <body>
 
-			<h1 style="text-align: center;color:green"> File Uploading page CMS </h1>
+			<h1 style="text-align: center;color:green"> Documents Uploading page CMS </h1>
      
 
       <form th:action="@{/document/save}" th:object="${document}" method="post" 
@@ -63,6 +63,17 @@
 	  <input type="submit"/>
       </form>
   			
-          
+  			<h1 style="text-align: center;color:green"> Maps Uploading page CMS </h1>
+  			
+   <form th:action="@{/maps/save}" th:object="${maps}" method="post" 
+      enctype="multipart/form-data"
+      style="max-width: 400px; margin: 0 auto;">
+
+      <input type="file" name="maps" id="maps" />
+      <textarea id="description" name="description" rows="4" cols="50"> </textarea>
+	  <input type="submit"/>
+   	
+   </form>
+      
 </body>
 </html>

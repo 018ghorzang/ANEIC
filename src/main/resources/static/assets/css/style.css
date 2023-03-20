@@ -166,7 +166,8 @@ span{
 .bg_img {
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+ }
 
 .title span {
     font-size: inherit;
@@ -1019,16 +1020,13 @@ span{
     background-position: center;
 }
 
-.banner-section::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: #000;
-    opacity: 0.8;
+.banner-section-about {
+    padding-top: 445px;
+    padding-bottom: 215px;
+    position: relative;
+    background-image: url("../images/staff.png");
+    background-size: cover;
+    background-position: center;
 }
 
 .banner-element{
@@ -1039,10 +1037,6 @@ span{
     transform: translateY(-50%);
 }
 
-.banner-section--style {
-    background-image: url("../images/banner-2.png");
-    overflow: hidden;
-}
 
 .banner-content .title{
     font-size: 60px;

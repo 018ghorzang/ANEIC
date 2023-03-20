@@ -63,14 +63,19 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		
-		 http.authorizeRequests()
-		.antMatchers("/delete/**").hasAuthority("ADMIN")
+		 http.authorizeRequests().antMatchers("/","/about","/coal","/doc","/videos",
+				 "/biomass","/electricitygeneration","/importelectricity",
+				 "/energyconsumption","/photo","/gas","/news","/organistion_chart",
+				 "/petroluem","/solar","/wind","/maps","/license").permitAll()
+		 
+		.antMatchers("/assets/**","/File-package/**","/more/**").permitAll()
+		.antMatchers("/delete/**","/doc","/user_message").hasAuthority("ADMIN")
 		.antMatchers("/edit/**").hasAnyAuthority("ADMIN","EDITOR")
 		.anyRequest().authenticated()
 		.and()
 		.formLogin().permitAll()
 		.and()
-		.oauth2Login()
+		.oauth2Login().successHandler(auth2LoginSuccessHandler)
 		.and()
 		.logout().permitAll();
 	}

@@ -32,7 +32,7 @@ public class News {
 		return "news";
 	}
 	
-	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "more/{id}", method = RequestMethod.GET)
      public String  showSelectedPost(Model model,@PathVariable Long id){
 		
         List<NewsModel> listNews = newsServices.getAll();

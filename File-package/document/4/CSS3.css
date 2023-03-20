@@ -1,0 +1,57 @@
+
+body {
+  font-family: arial, helvetica;
+}
+.specialImg{
+  float: left;
+  clip-path: circle(30% at 30% 50%);
+  shape-outside: circle(30% at 30% 50%);
+  shape-margin: 2;
+}
+  .head{
+    width: 500px;
+    height: 400px;
+    background: green;
+}
+.head img{
+  float: left;
+  margin-right: 30px;
+  height: 100px;
+  width: 100px;
+}
+.rgb-color{
+  color: rgb(32,55,220,0.4);
+}
+.underline{
+  text-decoration: underline;
+}
+.overline{
+ text-decoration: overline;
+}
+.line-throught{
+  text-decoration: line-through;
+}
+.none{
+  text-decoration:none;
+}
+.Uppercase{
+  text-transform: uppercase;
+}
+.lowecase{
+  text-transform: lowercase;
+}
+.capitalize{
+  text-transform: capitalize;
+}
+.line-height{
+  line-height: 89px;
+}
+.letter-space{
+  letter-spacing: 10px;
+}
+.rtl{
+  direction: rtl;
+}
+.ltr{
+  direction: ltr;
+}

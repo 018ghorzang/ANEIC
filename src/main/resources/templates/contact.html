@@ -62,66 +62,71 @@
         </div>
   
         <nav id="navbar" class="navbar">
-          <ul>
-            <li><a class="nav-link scrollto " th:href="@{/}">Home</a></li>
-            <li><a class="nav-link scrollto" th:href="@{/about}">About</a></li>
-            <li class="dropdown active"><a th:href="@{/}">Energy Resource <i class="bi-chevron-down"></i></a>
-              <ul>
-                <li class="dropdown"><a href="#">Non-Renewable <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a th:href="@{/coal}">Coal</a></li>
-                    <li><a th:href="@{/gas}">Gas</a></li>
-                    <li><a th:href="@{/petroluem}">Petroluem</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown"><a href="#">Renewable<i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a th:href="@{/wind}">Wind</a></li>
-                    <li><a th:href="@{/solar}">Solar</a></li>
-                    <li><a th:href="@{/biomass}">Biomass</a></li>
-                  </ul>
-                </li>
-  
-                <li class="dropdown"><a href="#">Automic <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a th:href="@{/automic}">Autom</a></li>
-                    <li><a href="#">--</a></li>
-                    <li><a href="#">--</a></li>
-                  </ul>
-                </li>
-  
-              </ul>
-            </li>
-  
-            <li class="dropdown active"><a href="#">Statistics <i class="bi-chevron-down"></i></a>
-              <ul>
-                <li><a th:href="@{/document}">Documents</a></li>
+        <ul>
+        
+          <li><a class="nav-link scrollto " th:href="@{/}">Home</a></li>
+          <li><a class="nav-link scrollto" th:href="@{/about}">About</a></li>
+          <li><a class="nav-link scrollto" th:href="@{/maps}">Maps</a></li>
+          <li class="dropdown active"><a th:href="@{/}">Energy Resource <i class="bi-chevron-down"></i></a>
+            <ul>
+             <li class="dropdown"><a href="#">Non-Renewable <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a th:href="@{/coal}">Coal</a></li>
+                  <li><a th:href="@{/gas}">Gas</a></li>
+                  <li><a th:href="@{/petroluem}">Petroluem</a></li>
+                  <li><a th:href="@{/automic}">Autom</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#">Renewable<i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a th:href="@{/water}">Hydrogen</a></li>
+                  <li><a th:href="@{/solar}">Solar</a></li>
+                  <li><a th:href="@{/wind}">Wind</a></li>
+                  <li><a th:href="@{/biomass}">Biomass</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+          
+          <li class="dropdown active"><a href="#"> Documents <i class="bi-chevron-down"></i></a>
+            <ul>
+                <li><a th:href="@{/importelectricity}">Laws</a></li>
+                <li><a th:href="@{/electricitygeneration}">Regulation</a></li>
+                <li><a th:href="@{/energyconsumption}">Procedure</a></li>
+            </ul>
+          </li>
+          
+           <li class="dropdown active"><a href="#">Reports<i class="bi-chevron-down"></i></a>
+            <ul>
+                <li><a th:href="@{/statistic}">Statistic</a></li>
+                <li><a th:href="@{/gis}">GIS</a></li>
                 <li><a th:href="@{/importelectricity}">Import Electricity</a></li>
-                <li><a th:href="@{/electricitygeneration}">Electricity generation</a></li>
-                <li><a th:href="@{/energyconsumption}">Energy Consumption</a></li>
-              </ul>
-            </li>
-  
-            <li class="dropdown active"><a href="#">Media <i class="bi-chevron-down"></i></a>
-              <ul>
-                <li><a th:href="@{/videos}">Video</a></li>
-                <li><a th:href="@{/photo}">Photo</a></li>
-                <li class="dropdown"><a href="#">Social Media <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a th:href="@{/facebook}">facebook</a></li>
-                    <li><a th:href="@{/twitter}">Twitter</a></li>
-                    <li><a th:href="@{/instagram}">Instagram</a></li>
-                    <li><a th:href="@{/youtube}">Youtube</a></li>
-                  </ul>
-                </li>
-                
-              </ul>
-            </li>
-  
-            <li><a class="nav-link scrollto" th:href="@{/contact}">Contact</a></li>
-          </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
+                <li><a th:href="@{/electricitygeneration}">Generation Electricity</a></li>
+                <li><a th:href="@{/energyconsumption}">Consumption Electricity</a></li>
+            </ul>
+          </li>
+          
+          <li class="dropdown active"><a href="#">Media <i class="bi-chevron-down"></i></a>
+            <ul>
+              <li><a th:href="@{/videos}">Video</a></li>
+              <li><a th:href="@{/photo}">Photo</a></li>
+              <li class="dropdown"><a href="#">Social Media <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a th:href="@{/facebook}">facebook</a></li>
+                  <li><a th:href="@{/twitter}">Twitter</a></li>
+                  <li><a th:href="@{/instagram}">Instagram</a></li>
+                  <li><a th:href="@{/youtube}">Youtube</a></li>
+                </ul>
+              </li>
+              
+            </ul>
+          </li>
+
+          <li><a class="nav-link scrollto" th:href="@{/contact}">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
   
       </div>
     </header><!-- End Header --> <!-- End Header -->
@@ -142,7 +147,7 @@
     <!-- banner-section end -->
 
     <div class="alert alert-primary" role="alert">
-       <strong  th:inline="text" class="mr-auto">Login ID[[${#httpServletRequest.remoteUser}]]</strong>
+       <strong  th:inline="text" class="mr-auto">Welcome: [[${#httpServletRequest.remoteUser}]] </strong> 
          Our Active Users:<h1 th:text="${userCount}" class="counter-number"> </h1>
           </div>
             <div class="alert alert-primary" role="alert">
@@ -151,6 +156,8 @@
           
             <div class="alert alert-primary" role="alert">
        <strong  inline="text" class="mr-auto">User Email( [[${#request.userPrincipal.principal.Email}]])</strong>
+
+   
 
           </div>
     <a href="#" class="scrollToTop"><img src="assets/images/aeroplane.pg" alt="image"></a>
@@ -235,27 +242,7 @@
       </div>
     </section><!-- End Contact Section -->
 
-  <!-- tha Table start -->
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Message</th>
-        <th>Subject</th>
-        <th>Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr th:each="m:${message}">
-        <td th:text="${m.user.name}" style="color: #04AA6D; width: 200px;"></td>
-        <td th:text="${m.mess}"></td>
-        <td th:text="${m.subject}" style="color: tomato; font-weight:bold"></td>
-        <td th:text="${#dates.format(m.date, 'MM/dd/yyyy')}" style="color:green;font-weight: bold;"></td>
-      </tr>  
-    </tbody>
-  </table>
-
-  <!-- the Table End -->
+ 
 
 
    
@@ -290,21 +277,10 @@
            </div>
          </div>
          <div class="footer-right col-md-4 col-sm-6">
-           <h2> ANEIC<span> logo</span></h2>
+           <h2> ANEIC</h2>
            <p class="name"> Afghanistan Natioanl Electricity information Center &copy; 2022</p>
          </div>
        </footer>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

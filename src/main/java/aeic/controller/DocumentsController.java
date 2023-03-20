@@ -36,6 +36,7 @@ public class DocumentsController {
 	 public String getDocuments(Model model) {
 		 List<DocumentModel> getDocuments = documentsServices.getAll();
 		 
+		  
 		 model.addAttribute("documents",getDocuments);
 		 return "documents";
 	 }

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>NEIC</title>
+    <title>organistion chart</title>
 
       <!-- This is the second page links-->
      <!-- Vendor CSS Files -->
@@ -56,73 +56,77 @@
       <div class="container d-flex align-items-center justify-content-between">
   
         <div class="logo">
-          <h1><a href="index.html">NEIC</a></h1>
+          <h1><a href="index.html">ANEIC</a></h1>
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
   
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li><a class="nav-link scrollto " th:href="@{/}">Home</a></li>
-            <li><a class="nav-link scrollto" th:href="@{/about}">About</a></li>
-            <li class="dropdown active"><a th:href="@{/}">Energy Resource <i class="bi-chevron-down"></i></a>
-              <ul>
-                <li class="dropdown"><a href="#">Non-Renewable <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a th:href="@{/coal}">Coal</a></li>
-                    <li><a th:href="@{/gas}">Gas</a></li>
-                    <li><a th:href="@{/petroluem}">Petroluem</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown"><a href="#">Renewable<i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a th:href="@{/wind}">Wind</a></li>
-                    <li><a th:href="@{/solar}">Solar</a></li>
-                    <li><a th:href="@{/biomass}">Biomass</a></li>
-                  </ul>
-                </li>
-  
-                <li class="dropdown"><a href="#">Automic <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a th:href="@{/automic}">Autom</a></li>
-                    <li><a href="#">--</a></li>
-                    <li><a href="#">--</a></li>
-                  </ul>
-                </li>
-  
-              </ul>
-            </li>
-  
-            <li class="dropdown active"><a href="#">Statistics <i class="bi-chevron-down"></i></a>
-              <ul>
-                <li><a th:href="@{/document}">Documents</a></li>
+       <nav id="navbar" class="navbar">
+        <ul>
+        
+          <li><a class="nav-link scrollto " th:href="@{/}">Home</a></li>
+          <li><a class="nav-link scrollto" th:href="@{/about}">About</a></li>
+          <li><a class="nav-link scrollto" th:href="@{/maps}">Maps</a></li>
+          <li class="dropdown active"><a th:href="@{/}">Energy Resource <i class="bi-chevron-down"></i></a>
+            <ul>
+             <li class="dropdown"><a href="#">Non-Renewable <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a th:href="@{/coal}">Coal</a></li>
+                  <li><a th:href="@{/gas}">Gas</a></li>
+                  <li><a th:href="@{/petroluem}">Petroluem</a></li>
+                  <li><a th:href="@{/automic}">Autom</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#">Renewable<i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a th:href="@{/water}">Hydrogen</a></li>
+                  <li><a th:href="@{/solar}">Solar</a></li>
+                  <li><a th:href="@{/wind}">Wind</a></li>
+                  <li><a th:href="@{/biomass}">Biomass</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+          
+          <li class="dropdown active"><a href="#"> Documents <i class="bi-chevron-down"></i></a>
+            <ul>
+                <li><a th:href="@{/importelectricity}">Laws</a></li>
+                <li><a th:href="@{/electricitygeneration}">Regulation</a></li>
+                <li><a th:href="@{/energyconsumption}">Procedure</a></li>
+            </ul>
+          </li>
+          
+           <li class="dropdown active"><a href="#">Reports<i class="bi-chevron-down"></i></a>
+            <ul>
+                <li><a th:href="@{/statistic}">Statistic</a></li>
+                <li><a th:href="@{/gis}">GIS</a></li>
                 <li><a th:href="@{/importelectricity}">Import Electricity</a></li>
-                <li><a th:href="@{/electricitygeneration}">Electricity generation</a></li>
-                <li><a th:href="@{/energyconsumption}">Energy Consumption</a></li>
-              </ul>
-            </li>
-  
-            <li class="dropdown active"><a href="#">Media <i class="bi-chevron-down"></i></a>
-              <ul>
-                <li><a th:href="@{/videos}">Video</a></li>
-                <li><a th:href="@{/photo}">Photo</a></li>
-                <li class="dropdown"><a href="#">Social Media <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a th:href="@{/facebook}">facebook</a></li>
-                    <li><a th:href="@{/twitter}">Twitter</a></li>
-                    <li><a th:href="@{/instagram}">Instagram</a></li>
-                    <li><a th:href="@{/youtube}">Youtube</a></li>
-                  </ul>
-                </li>
-                
-              </ul>
-            </li>
-  
-            <li><a class="nav-link scrollto" th:href="@{/contact}">Contact</a></li>
-          </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
-  
+                <li><a th:href="@{/electricitygeneration}">Generation Electricity</a></li>
+                <li><a th:href="@{/energyconsumption}">Consumption Electricity</a></li>
+            </ul>
+          </li>
+          
+          <li class="dropdown active"><a href="#">Media <i class="bi-chevron-down"></i></a>
+            <ul>
+              <li><a th:href="@{/videos}">Video</a></li>
+              <li><a th:href="@{/photo}">Photo</a></li>
+              <li class="dropdown"><a href="#">Social Media <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a th:href="@{/facebook}">facebook</a></li>
+                  <li><a th:href="@{/twitter}">Twitter</a></li>
+                  <li><a th:href="@{/instagram}">Instagram</a></li>
+                  <li><a th:href="@{/youtube}">Youtube</a></li>
+                </ul>
+              </li>
+              
+            </ul>
+          </li>
+
+          <li><a class="nav-link scrollto" th:href="@{/contact}">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
       </div>
     </header><!-- End Header --><!-- End Header -->
 
@@ -202,18 +206,6 @@
            <p class="name"> Afghanistan Natioanl Electricity information Center &copy; 2022</p>
          </div>
        </footer>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- jquery -->

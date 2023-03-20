@@ -66,14 +66,13 @@
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
-	
-
 
       <nav id="navbar" class="navbar">
         <ul>
         
           <li><a class="nav-link scrollto " th:href="@{/}">Home</a></li>
           <li><a class="nav-link scrollto" th:href="@{/about}">About</a></li>
+          <li><a class="nav-link scrollto" th:href="@{/maps}">Maps</a></li>
           <li class="dropdown active"><a th:href="@{/}">Energy Resource <i class="bi-chevron-down"></i></a>
             <ul>
              <li class="dropdown"><a href="#">Non-Renewable <i class="bi bi-chevron-right"></i></a>
@@ -81,36 +80,39 @@
                   <li><a th:href="@{/coal}">Coal</a></li>
                   <li><a th:href="@{/gas}">Gas</a></li>
                   <li><a th:href="@{/petroluem}">Petroluem</a></li>
+                  <li><a th:href="@{/automic}">Autom</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#">Renewable<i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a th:href="@{/wind}">Wind</a></li>
+                  <li><a th:href="@{/water}">Hydrogen</a></li>
                   <li><a th:href="@{/solar}">Solar</a></li>
+                  <li><a th:href="@{/wind}">Wind</a></li>
                   <li><a th:href="@{/biomass}">Biomass</a></li>
                 </ul>
               </li>
 
-              <li class="dropdown"><a href="#">Automic <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a th:href="@{/automic}">Autom</a></li>
-                  <li><a th:href="@{/oauth2/authorization/google}">Authentication</a></li>
-                  <li><a href="#">--</a></li>
-                </ul>
-              </li>
-
             </ul>
           </li>
-
-          <li class="dropdown active"><a href="#"> Statistic <i class="bi-chevron-down"></i></a>
+          
+          <li class="dropdown active"><a href="#"> Documents <i class="bi-chevron-down"></i></a>
             <ul>
-                <li><a th:href="@{/document}">Documents</a></li>
-                <li><a th:href="@{/importelectricity}">Import Electricity</a></li>
-                <li><a th:href="@{/electricitygeneration}">Electricity generation</a></li>
-                <li><a th:href="@{/energyconsumption}">Energy Consumption</a></li>
+                <li><a th:href="@{/importelectricity}">Laws</a></li>
+                <li><a th:href="@{/electricitygeneration}">Regulation</a></li>
+                <li><a th:href="@{/energyconsumption}">Procedure</a></li>
             </ul>
           </li>
-
+          
+           <li class="dropdown active"><a href="#">Reports<i class="bi-chevron-down"></i></a>
+            <ul>
+                <li><a th:href="@{/statistic}">Statistic</a></li>
+                <li><a th:href="@{/gis}">GIS</a></li>
+                <li><a th:href="@{/importelectricity}">Import Electricity</a></li>
+                <li><a th:href="@{/electricitygeneration}">Generation Electricity</a></li>
+                <li><a th:href="@{/energyconsumption}">Consumption Electricity</a></li>
+            </ul>
+          </li>
+          
           <li class="dropdown active"><a href="#">Media <i class="bi-chevron-down"></i></a>
             <ul>
               <li><a th:href="@{/videos}">Video</a></li>
@@ -119,7 +121,7 @@
                 <ul>
                   <li><a th:href="@{/facebook}">facebook</a></li>
                   <li><a th:href="@{/twitter}">Twitter</a></li>
-                  <li><a th:href="@{/instagram}">Instagram</a></li>
+                  <li><a th:href="@{/instagram}">Malagari</a></li>
                   <li><a th:href="@{/youtube}">Youtube</a></li>
                 </ul>
               </li>
@@ -146,7 +148,7 @@
                         <h2 class="title">Afghanistan National Energy Information Center</h2>
                         <p>This is the Afghanistan National Energy Information Center</p>
                         <div class="btn-area">
-                           <a th:href="@{oauth2/authorization/google}" class="cmn-btn-active"><i class="fab fa-google"></i> <i class="fas fa-sign-in-alt"></i>Register</a>
+                           <a th:href="@{/login}" class="cmn-btn-active"><i class="fab fa-google"></i> <i class="fas fa-sign-in-alt"></i>Register</a>
                         </div>
                     </div>
                 </div>
@@ -159,127 +161,8 @@
     <a href="#" class="scrollToTop"><img src="assets/images/aeroplane.png" alt="image"></a>
 
 
- 
-      
-    <section class="team-section py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-6">
-                    <div class="card border-0 shadow-lg pt-5 my-5 position-relative">
-                        <div class="card-body p-4">
-                            <div class="member-profile position-absolute w-100 text-center">
-                                <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="assets/images/Anwarzai.png" alt="">
-                            </div>
-                            <div class="card-text pt-1">
-                                <h5 class="member-name mb-0 text-center text-primary font-weight-bold">Muhammad Abid Anawarzay</h5>
-                                <div class="mb-3 text-center">General / CEO</div>
-                                <div class="des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus. Curabitur pellentesque convallis purus non ornare. Donec bibendum sed purus dignissim rutrum. Maecenas bibendum feugiat est, et venenatis nunc.</div>
-                            </div>
-                        </div><!--//card-body-->
-                        <div class="card-footer theme-bg-primary border-0 text-center">
-                            <ul class="social-list list-inline mb-0 mx-auto">
-                                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-linkedin"></i></a></li>
-                                
-                            </ul><!--//social-list-->
-                        </div><!--//card-footer-->
-                    </div><!--//card-->
-                </div><!--//col-->
-                
-                <div class="col-12 col-md-6">
-                    <div class="card border-0 shadow-lg pt-5 my-5 position-relative">
-                        <div class="card-body p-4">
-                            <div class="member-profile position-absolute w-100 text-center">
-                                <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="assets/images/Himat.png" alt="">
-                            </div>
-                            <div class="card-text pt-1">
-                                <h5 class="member-name mb-0 text-center text-primary font-weight-bold">Sheer Muhammad Himat</h5>
-                                <div class="mb-3 text-center">CEO</div>
-                                <div class="des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus. Curabitur pellentesque convallis purus non ornare. Donec bibendum sed purus dignissim rutrum. Maecenas bibendum feugiat est, et venenatis nunc.</div>
-                            </div>
-                        </div><!--//card-body-->
-                        <div class="card-footer theme-bg-primary border-0 text-center">
-                            <ul class="social-list list-inline mb-0 mx-auto">
-                                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-linkedin"></i></a></li>
-                            </ul><!--//social-list-->
-                        </div><!--//card-footer-->
-                    </div><!--//card-->
-                </div><!--//col-->
-                
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-lg pt-5 my-5 position-relative">
-                        <div class="card-body p-4">
-                            <div class="member-profile position-absolute w-100 text-center">
-                                <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="assets/images/Ahmadi.png" alt="">
-                            </div>
-                            <div class="card-text pt-1">
-                                <h5 class="member-name mb-0 text-center text-primary font-weight-bold">Ahmad Shah Ahmadi</h5>
-                                <div class="mb-3 text-center">GIS Officer</div>
-                                <div class="des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus. </div>
-                            </div>
-                        </div><!--//card-body-->
-                        <div class="card-footer theme-bg-primary border-0 text-center">
-                            <ul class="social-list list-inline mb-0 mx-auto">
-                                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-linkedin"></i></a></li>
-                            </ul><!--//social-list-->
-                        </div><!--//card-footer-->
-                    </div><!--//card-->
-                </div><!--//col-->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-lg pt-5 my-5 position-relative">
-                        <div class="card-body p-4">
-                            <div class="member-profile position-absolute w-100 text-center">
-                                <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="">
-                            </div>
-                            <div class="card-text pt-1">
-                                <h5 class="member-name mb-0 text-center text-primary font-weight-bold">Jawed Ghorzang</h5>
-                                <div class="mb-3 text-center">MIS Officer</div>
-                                <div class="des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus.</div>
-                            </div>
-                        </div><!--//card-body-->
-                        <div class="card-footer theme-bg-primary border-0 text-center">
-                            <ul class="social-list list-inline mb-0 mx-auto">
-                                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-linkedin"></i></a></li>
-                            </ul><!--//social-list-->
-                        </div><!--//card-footer-->
-                    </div><!--//card-->
-                </div><!--//col-->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-lg pt-5 my-5 position-relative">
-                        <div class="card-body p-4">
-                            <div class="member-profile position-absolute w-100 text-center">
-                                <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="assets/images/Arian.png" alt="">
-                            </div>
-                            <div class="card-text pt-1">
-                                <h5 class="member-name mb-0 text-center text-primary font-weight-bold">Hafizullah Arian-</h5>
-                                <div class="mb-3 text-center">Statistics Officer</div>
-                                <div class="des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus.</div>
-                            </div>
-                        </div><!--//card-body-->
-                        <div class="card-footer theme-bg-primary border-0 text-center">
-                            <ul class="social-list list-inline mb-0 mx-auto">
-                                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-linkedin"></i></a></li>
-                            </ul><!--//social-list-->
-                        </div><!--//card-footer-->
-                    </div><!--//card-->
-                </div><!--//col-->
-            </div><!--//row-->
-            
-        </div>
-        
-    </section>
-
-    <!-- End of Members-->
     
+     
 
 
      <!-- overview-section start -->
@@ -296,22 +179,8 @@
                     <div class="overview-content pt-120 pb-120">
                         <h2 class="title">Vision & Mission</h2>
                         <p>Optimal sustainable development, maintenance of quality and efficient use of water resources to match with the growing demands on this precious natural resource of the country.</p>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6">
-                                <ul class="overview-item">
-                                    <li>Praesent lacus integer.</li>
-                                    <li>Fermentum sed duis</li>
-                                    <li>Aliquam consectetuer</li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <ul class="overview-item">
-                                    <li>Praesent lacus integer.</li>
-                                    <li>Fermentum sed duis</li>
-                                    <li>Aliquam consectetuer</li>
-                                </ul>
-                            </div>
-                        </div>
+                             <br>
+                             <br>
                         <div class="row mb-30-none">
                             <div class="col-lg-4 col-md-6 col-sm-8 mb-30">
                                 <div class="counter-item">
@@ -365,7 +234,7 @@
                         </td>  
                         </div>
                         <div class="service-content">
-                        <a class="learn_more" th:href="@{${news.id}}"> <h4>   <td th:text="${news.title}"> </td>  </h4>   
+                        <a class="learn_more" th:href="@{|more/${news.id}|}"> <h4>   <td th:text="${news.title}"> </td>  </h4>   
                          <p class="d-inline" style="font-weight: bold;">➦ Read more...     </p>  
                          <p class="d-inline" th:text="${#dates.format(news.uploadTime, 'MM/dd/yyyy')}" style="color: green; font-weight: bold;"> </p>                 
                        </a>
@@ -391,15 +260,13 @@
     <footer class="footer">
         <div class="footer-left col-md-4 col-sm-6">
           <p class="about">
-            <span> About the company</span> Ut congue augue non tellus bibendum, in varius tellus condimentum. In scelerisque nibh tortor, sed rhoncus odio condimentum in. Sed sed est ut sapien ultrices eleifend. Integer tellus est, vehicula eu lectus tincidunt,
-            ultricies feugiat leo. Suspendisse tellus elit, pharetra in hendrerit ut, aliquam quis augue. Nam ut nibh mollis, tristique ante sed, viverra massa.
-          </p>
+             <span style="font-size: 30px;">Granted Licenses </span>
+              Brishna,77insaat, Bayat Power,Zularistaan <a href="license">learn more...</a>
+           </p>
           <div class="icons">
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-google-plus"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"> <img src="assets/images/malgari.png" style="width: auto; height: 20px;"> </a>
           </div>
         </div>
         <div class="footer-center col-md-4 col-sm-6">
@@ -417,8 +284,8 @@
           </div>
         </div>
         <div class="footer-right col-md-4 col-sm-6">
-          <h2> NEIC<span> logo</span></h2>
-          <p class="name">Natioanl Electricity information Center &copy; 2022</p>
+          <h2> ANEIC<span> logo</span></h2>
+          <p class="name">Afghanistan Natioanl Electricity information Center &copy; 2022</p>
         </div>
       </footer>
 
@@ -446,7 +313,7 @@
 <script src="assets/js/jquery.counterup.min.js"></script>
 <!-- paroller js -->
 <script src="assets/js/jquery.paroller.min.js"></script>
-<!-- main -->
+<!-- main --> 
 <script src="assets/js/main.js"></script>
 
 

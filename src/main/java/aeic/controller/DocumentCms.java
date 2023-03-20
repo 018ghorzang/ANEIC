@@ -19,9 +19,11 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import aeic.model.DocumentModel;
+import aeic.model.MapsModel;
 import aeic.model.NewsModel;
 import aeic.model.VideoModel;
 import aeic.services.DocumentsServices;
+import aeic.services.MapsService;
 import aeic.services.NewsServices;
 import aeic.services.VideoServices;
 
@@ -38,10 +40,12 @@ public class DocumentCms {
 	@Autowired
 	VideoServices videoServices;
 	
+	@Autowired
+	MapsService mapsService;
+	
 	@GetMapping("/doc")
 	public String getDocumentCms() {	
-		return "doc";
-				
+		return "doc";			
 	}
 	 
 	
@@ -168,6 +172,49 @@ public class DocumentCms {
 		return "redirect:/doc";
 	}
 	
+	
+	 /* UPLOADING MAPS */
+	
+		@PostMapping("/maps/save")
+		public String saveMaps(@ModelAttribute(name = "maps")
+		        MapsModel maps,
+				RedirectAttributes ra,
+				@RequestParam("maps") MultipartFile multipartFile) throws IOException {
+			
+			String mapName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+			
+			maps.setMap(mapName);
+			maps.setUploadTime(new Date());
+			
+			
+		     mapsService.saveMap(maps);
+		     
+		    String   uploadDir = "./File-package/maps/" + maps.getId();
+		    
+		    Path uploadPath = Paths.get(uploadDir);
+		    
+		    if(!Files.exists(uploadPath)) {
+		    	Files.createDirectories(uploadPath);
+		    }
+		    
+		    
+		    try(InputStream inputStream = multipartFile.getInputStream()){
+		    	
+		    	Path filePath = uploadPath.resolve(mapName);
+		    	System.out.println(filePath.toFile().getAbsolutePath());
+		    	Files.copy(inputStream,filePath,StandardCopyOption.REPLACE_EXISTING);
+		    	
+		    }catch (IOException e) {
+		    	throw new IOException("Could not save uploaded file: " + mapName);
+		    }
+		    
+		    ra.addFlashAttribute("message","The map has been saved successfully!");
+			System.out.println("this is the image url: " + maps.getMap());
+			return "redirect:/doc";
+		}
+	
+		
+		
 }
 
 

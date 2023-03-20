@@ -30,11 +30,9 @@ public class Contact {
 	@GetMapping("/contact")
 	public String getAbout(Model model) {
 		
-		List<MessageTable> getMessage = contactService.getMessage();
 		List<User> getUsers = userServices.getUser();
 		
 		model.addAttribute("users",getUsers);
-		model.addAttribute("message",getMessage);
 		model.addAttribute("userCount",userServices.getUserCount());
 		
 	  System.out.print("This is the user number: " + userServices.getUserCount());
